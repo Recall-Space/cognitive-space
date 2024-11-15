@@ -50,13 +50,17 @@ classDiagram
     }
 
     class AzureAISearchStorage{
-        + Name: String
-        + Description: String
+        + endpoint: String
+        + api_key: String
+        + index_name: String
+        + index_client: String
+        + search_client: String
     }
 
-    class Neo4jStorage{
-        + Name: String
-        + Description: String
+    class MongoStorage{
+        + db_name: String
+        + collection_name: String
+        + uri: String
     }
 
 
@@ -65,6 +69,14 @@ classDiagram
     }
 
     class GravitationalRecall {
+        +recall(input: EncodedData) : Data
+    }
+
+    class EmbeddingEncode {
+        +encode(input: Data) : EncodedData
+    }
+
+    class EmbeddingRecall {
         +recall(input: EncodedData) : Data
     }
 
@@ -77,10 +89,12 @@ classDiagram
     CognitiveSynthesis *-- Storage
 
     Storage <|-- AzureAISearchStorage
-    Storage <|-- Neo4jStorage
+    Storage <|-- MongoStorage
 
     CognitiveEncode <|-- GravitationalEncode
     CognitiveRecall <|-- GravitationalRecall
+    CognitiveEncode <|-- EmbeddingEncode
+    CognitiveRecall <|-- EmbeddingRecall
 ```
 
 ### ✖️➕ Recall Space algorithms
