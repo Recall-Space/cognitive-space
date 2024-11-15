@@ -21,7 +21,7 @@ The **cognitive-space** package offers tools for abstracting and storing Recall 
 3. Develop innovative models of the AI Brain that can be easily integrated into the Recall Space ecosystem.
 
 ## 🏢 UML Class Design
-:::mermaid
+```mermaid
 classDiagram
     class Brain {
         +CognitiveEncode : CognitiveEncode
@@ -81,7 +81,7 @@ classDiagram
 
     CognitiveEncode <|-- GravitationalEncode
     CognitiveRecall <|-- GravitationalRecall
-:::
+```
 
 ### ✖️➕ Recall Space algorithms
 + **Embedding Model:** It is the simplest `EmbeddingEncode: CognitiveEncode` and `EmbeddingRecall: CognitiveRecall` algorithms that we provide, and it's perfect for simple cases. Visit [README](/cognitive_space/algorithms/embedding_model/README.md)
