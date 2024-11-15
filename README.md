@@ -8,6 +8,10 @@
 | Production  | 0.0.1   |
 | Development | 0.0.1   |
 
+```
+pip install cognitive-space==0.0.1
+```
+
 # 🦉 Cognitive Space
 
 The **cognitive-space** package offers tools for abstracting and storing Recall Space Cognitive Algorithms💫. It allows you to customize different components of the 🧠AI brain abstraction to suit your application's requirements, ranging from basic vector search to advanced engram modeling.
